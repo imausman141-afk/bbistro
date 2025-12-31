@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Basil Pesto Pasta",
+        "description": "Fresh pasta tossed in homemade basil pesto with cherry tomatoes and parmesan.",
+        "price": 15.99,
+        "image": "images/pasta.jpg"
+    },
+    {
+        "name": "Grilled Salmon",
+        "description": "Herb-crusted salmon with seasonal vegetables and lemon butter sauce.",
+        "price": 22.99,
+        "image": "images/salmon.jpg"
+    },
+    {
+        "name": "Chocolate Lava Cake",
+        "description": "Warm chocolate cake with molten center, served with vanilla ice cream.",
+        "price": 8.99,
+        "image": "images/cake.jpg"
+    }
+]
