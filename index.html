@@ -1,67 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basil Dining - Authentic Cuisine</title>
-    <link rel="stylesheet" href="Basil.css">
+<meta charset="UTF-8">
+<meta name="description" content="Basil Bistro Restaurant – Fresh, modern bistro in Fazaia Housing Society, Lahore">
+<meta name="keywords" content="Basil Bistro, Restaurant Lahore, Bistro Food, AR Tower">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basil Bistro Restaurant | Lahore</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#2f6b4f;
+  --light:#f7f9f6;
+  --dark:#1e1e1e;
+  --accent:#c9e4d6;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:var(--light);
+  color:var(--dark);
+  line-height:1.6;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1552566626-52f8b828add9') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+}
+
+.hero h1{
+  font-size:3.2rem;
+  animation:fadeDown 1s ease;
+}
+
+.hero p{
+  max-width:600px;
+  margin:20px auto;
+  font-size:1.1rem;
+  opacity:0.95;
+}
+
+.hero .btns a{
+  display:inline-block;
+  margin:10px;
+  padding:12px 30px;
+  background:var(--green);
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.hero .btns a:hover{
+  background:#24543e;
+  transform:translateY(-2px);
+}
+
+/* SECTIONS */
+section{
+  padding:70px 8%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:2.3rem;
+  color:var(--green);
+}
+
+/* ABOUT */
+.about{
+  background:white;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  padding:50px;
+}
+
+/* MENU */
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:25px;
+}
+
+.menu-card{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.menu-card:hover{
+  transform:translateY(-6px);
+}
+
+.menu-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.menu-card h3{
+  padding:15px;
+  color:var(--green);
+}
+
+/* ORDER */
+.order{
+  background:linear-gradient(120deg, var(--green), #3f8c68);
+  color:white;
+  text-align:center;
+}
+
+.order a{
+  background:white;
+  color:var(--green);
+  padding:14px 36px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+form button{
+  background:var(--green);
+  color:white;
+  border:none;
+  padding:12px 30px;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#ccc;
+  text-align:center;
+  padding:30px;
+}
+
+footer a{
+  color:#9fe0c0;
+  text-decoration:none;
+  margin:0 10px;
+}
+
+/* ANIMATION */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@media(max-width:768px){
+  .hero h1{font-size:2.3rem;}
+  .contact-grid{grid-template-columns:1fr;}
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">Basil Dining</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#reservations">Reservations</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Basil Dining</h1>
-            <p>Experience the finest in authentic cuisine, crafted with fresh ingredients and passion.</p>
-            <a href="#menu" class="btn">View Menu</a>
-        </div>
-        <img src="images/hero-dish.jpg" alt="Delicious dish" class="hero-image">
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Basil Bistro Restaurant</h1>
+    <p>Fresh flavors, cozy bistro vibes, and quality dining in the heart of Lahore</p>
+    <div class="btns">
+      <a href="#menu">View Menu</a>
+      <a href="https://www.foodpanda.pk" target="_blank">Order Online</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </div>
+</section>
 
-    <section id="menu">
-        <h2>Our Menu</h2>
-        <div id="menu-items" class="menu-grid"></div>
-    </section>
+<!-- ABOUT -->
+<section class="about">
+  <div class="section-title">
+    <h2>About Basil Bistro</h2>
+  </div>
+  <p style="text-align:center;max-width:800px;margin:auto;">
+    Basil Bistro offers a relaxed, modern dining experience with fresh ingredients,
+    comfortable ambiance, and excellent value. Located inside AR Tower, we’re the
+    perfect place for casual meals and friendly gatherings.
+  </p>
+</section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Basil Dining is a family-owned restaurant dedicated to bringing you the flavors of traditional cuisine. Our chefs use only the freshest ingredients to create memorable dining experiences.</p>
-        <img src="images/restaurant-interior.jpg" alt="Restaurant interior">
-    </section>
+<!-- MENU -->
+<section id="menu">
+  <div class="section-title">
+    <h2>Our Menu</h2>
+    <p>Rs 1–2,000 per person</p>
+  </div>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Address: 123 Basil Street, Flavor Town</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Email: info@basildining.com</p>
-    </section>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe">
+      <h3>Starters</h3>
+    </div>
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1604908554168-1bb1a9a6d6f4">
+      <h3>Main Dishes</h3>
+    </div>
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+      <h3>Fast Food</h3>
+    </div>
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1510627498534-cf7e9002facc">
+      <h3>Beverages & Desserts</h3>
+    </div>
+  </div>
+</section>
 
-    <section id="reservations">
-        <h2>Make a Reservation</h2>
-        <form id="reservation-form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="date" required>
-            <input type="time" required>
-            <button type="submit">Reserve</button>
-        </form>
-    </section>
+<!-- ORDER -->
+<section class="order">
+  <h2>Order Online</h2>
+  <p>Enjoy Basil Bistro from the comfort of your home</p>
+  <br>
+  <a href="https://www.foodpanda.pk" target="_blank">Order via Foodpanda</a>
+</section>
 
-    <footer>
-        <p>&copy; 2023 Basil Dining. All rights reserved.</p>
-    </footer>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-title">
+    <h2>Contact & Location</h2>
+  </div>
 
-    <script src="Basil.js"></script>
+  <div class="contact-grid">
+    <div>
+      <p><strong>Address:</strong><br>
+      Block K, Fazaia Housing Society, Lahore 54000<br>
+      Located in AR Tower</p>
+
+      <p><strong>Phone:</strong> +92 325 4000314</p>
+
+      <p><strong>Email:</strong>
+        <a href="mailto:dine@basilbistro.pk">dine@basilbistro.pk</a>
+      </p>
+
+      <p><strong>Hours:</strong> Open Daily – Closes at 12:00 AM</p>
+
+      <iframe
+        src="https://maps.google.com/maps?q=Block%20K%20Fazaia%20Housing%20Society%20Lahore&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="250" style="border-radius:12px;border:0;">
+      </iframe>
+    </div>
+
+    <form action="mailto:dine@basilbistro.pk" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="5" placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <a href="#">Home</a> |
+    <a href="#menu">Menu</a> |
+    <a href="https://www.foodpanda.pk">Order</a> |
+    <a href="#contact">Contact</a>
+  </p>
+  <p>© 2025 Basil Bistro Restaurant | Lahore</p>
+</footer>
+
 </body>
 </html>
